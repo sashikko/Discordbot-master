@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<category>
+<pattern><set>etre</set> <set>pronom</set> <set>determinent</set> <set>saison</set></pattern>
+<template>
+	<srai>QUEL SAISON ON EST</srai>
+</template>
+</category>
+
+<category>
+<pattern> <set>pronom</set> <set>etre</set> <set>determinent</set> <set>saison</set></pattern>
+<template>
+	<srai>QUEL SAISON ON EST</srai>
+</template>
+</category>
+
+<category>
+<pattern>QUELLE SAISON *</pattern>
+<template>
+	<srai>QUEL SAISON ON EST</srai>
+</template>
+</category>
+
+<category>
+<pattern>QUEL SAISON *</pattern>
+<template>
+	<srai>QUEL SAISON ON EST</srai>
+</template>
+</category>
+
+<category>
+<pattern>QUEL SAISON ON EST</pattern>
+<template>
+<think>
+	<set name="month"><date locale="FR_fr" format="%B"/></set>
+	<condition name="month"> 
+		<li value="Janvier"><set name="Saison">la moitié de l'Hiver</set><set name="Saison1">apprécie l'été</set></li>
+		<li value="Février"><set name="Saison">l'Hiver</set><set name="Saison1">l'Été</set></li>
+		<li value="Mars"><set name="Saison">le Printemps</set><set name="Saison1">en Automne</set></li>
+		<li value="Avril"><set name="Saison">le Printemps</set><set name="Saison1">en plein millieu de l'Automne</set></li>
+		<li value="Mai"><set name="Saison">le Printemps</set><set name="Saison1"> juste après l'Automne</set></li>
+		<li value="Juin"><set name="Saison">le début de l'Été</set><set name="Saison1">approche l'Hiver</set></li>
+		<li value="Juillet"><set name="Saison">l'Été</set><set name="Saison1">en plein millieu d'Hiver</set></li>
+		<li value="Aout"><set name="Saison">l'Été</set><set name="Saison1">en Winter</set></li>
+		<li value="Septembre"><set name="Saison">le début de l'Automne</set><set name="Saison1">approche le Printemps</set></li>
+		<li value="Octobre"><set name="Saison">l'Automne</set><set name="Saison1">en Printemps</set></li>
+		<li value="Novembre"><set name="Saison">l'Automne</set><set name="Saison1">proche de la fin Printemps</set></li>
+		<li value="Décembre"><set name="Saison">l'Hiver</set><set name="Saison1">en Été</set></li>
+	</condition> 
+</think>
+Nous sommes actuellement dans le mois de <get name="month"/>, donc dans l'hémisphère Nord, la saison actuelle est donc <get name="Saison"/>.<br/>Ces pays en dessous de l'équateur <get name="Saison1"/>.
+</template>
+</category>
+
+</aiml>

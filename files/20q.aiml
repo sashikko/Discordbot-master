@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<category><pattern>20 Q</pattern><template><srai>20Q</srai></template></category>
+<category><pattern>20Q</pattern><template><srai>20Q</srai></template></category>
+<category><pattern>VINGT QUESTION</pattern><template><srai>20Q</srai></template></category>
+<category><pattern>20 QUESTION</pattern><template><srai>20Q</srai></template></category>
+<category><pattern>_ VINGT QUESTION</pattern><template><srai>20Q</srai></template></category>
+<category><pattern>_ 20 QUESTION</pattern><template><srai>20Q</srai></template></category>
+<category><pattern>_ VINGT QUESTION *</pattern><template><srai>20Q</srai></template></category>
+<category><pattern>_ 20 QUESTION *</pattern><template><srai>20Q</srai></template></category>
+
+<category>
+<pattern>20Q</pattern>
+<template>
+<think>
+<set name="qnum">1</set>
+</think>
+Ok on va jouer aux 20 questions. Je vais penser à un animal, végétable ou minerai et tu dois deviner ce que c'est en me posant des question repondant par oui ou par non.<br/><br/>Tu peux poser jusqu'a 20 questions avant le game over.<br/><br/>si tu abandone, écris juste "STOP" et je te dirais ce à quoi je pensais.<br/><br/>Tape "START" pour jouer.
+</template>
+</category>
+
+<category>
+<pattern>START</pattern>
+<that>TAPE START POUR JOUER</that>
+<template>
+<think>
+<set name="topic">20Q</set>
+<random>
+<li><set name="20qanswer">un cheval</set><set name="20qcategory">un animal</set></li>
+<li><set name="20qanswer">un cochon</set><set name="20qcategory">un animal</set></li>
+<li><set name="20qanswer">un chat</set><set name="20qcategory">un animal</set></li>
+<li><set name="20qanswer">un poisson</set><set name="20qcategory">un animal</set></li>
+<li><set name="20qanswer">un lion</set><set name="20qcategory">un animal</set></li>
+
+<li><set name="20qanswer">une rose</set><set name="20qcategory">un vegetable</set></li>
+<li><set name="20qanswer">une carotte</set><set name="20qcategory">un vegetable</set></li>
+<li><set name="20qanswer">une salade</set><set name="20qcategory">un vegetable</set></li>
+<li><set name="20qanswer">une pomme</set><set name="20qcategory">un vegetable</set></li>
+<li><set name="20qanswer">un oignon</set><set name="20qcategory">un vegetable</set></li>
+
+<li><set name="20qanswer">une pierre</set><set name="20qcategory">un minerai</set></li>
+<li><set name="20qanswer">du charbon</set><set name="20qcategory">un minerai</set></li>
+<li><set name="20qanswer">un diamant</set><set name="20qcategory">un minerai</set></li>
+<li><set name="20qanswer">un rubis</set><set name="20qcategory">un minerai</set></li>
+<li><set name="20qanswer">du bronze</set><set name="20qcategory">un minerai</set></li>
+</random>
+
+</think>
+Ok, je pense à <get name="20qcategory"/>. Pose donc ta première question.
+</template>
+</category>
+
+<topic name="20Q"> 
+<category> 
+<pattern>_</pattern>
+<template>
+<think>
+<set name="question"><star/></set>
+<set name="topic"></set>
+<set name="qsubject">NO SUBJECT</set>
+</think>
+	<condition name="question"> 
+		<li value="EST-CE UN *">Non, désolé. pose moi une autre question à propos.<think><set name="topic">20Q</set></think></li>
+		<li value="EST-CE *"><think><set name="qsubject">l'est</set></think><srai>20Q RANDOM</srai></li>
+		<li value="EST-CE QU IL *"><think><set name="qsubject">fait</set></think><srai>20Q RANDOM</srai></li>
+		<li value="EST-CE QUE IL *"><think><set name="qsubject">fait</set></think><srai>20Q RANDOM</srai></li>
+		<li value="IL FAIT*"><think><set name="qsubject">fait</set></think><srai>20Q RANDOM</srai></li>
+		<li value="FAIT-IL *"><think><set name="qsubject">fait</set></think><srai>20Q RANDOM</srai></li>
+		<li value="FAIT IL *"><think><set name="qsubject">fait</set></think><srai>20Q RANDOM</srai></li>
+		<li value="A-T-IL *"><think><set name="qsubject">a</set></think><srai>20Q RANDOM</srai></li>
+		<li value="A T IL *"><think><set name="qsubject">a</set></think><srai>20Q RANDOM</srai></li>
+		<li value="ÉTAIT-CE *"><think><set name="qsubject">l'était</set></think><srai>20Q RANDOM</srai></li>
+		<li value="ÉTAIT CE *"><think><set name="qsubject">l'était</set></think><srai>20Q RANDOM</srai></li>
+		<li value="EST-CE QUE CELA VA *"><think><set name="qsubject">le fera</set></think><srai>20Q RANDOM</srai></li>
+		<li value="PEUT-IL *"><think><set name="qsubject">peut</set></think><srai>20Q RANDOM</srai></li>
+		<li value="PEUT IL *"><think><set name="qsubject">peut</set></think><srai>20Q RANDOM</srai></li>
+		<li value="IL PEUT *"><think><set name="qsubject">peut</set></think><srai>20Q RANDOM</srai></li>
+		<li value="IL PEUX *"><think><set name="qsubject">peut</set></think><srai>20Q RANDOM</srai></li>
+		<li value="EST *"><srai>20Q RANDOM</srai></li>
+		<li value="POURRAIT *"><srai>20Q RANDOM</srai></li>
+		<li value="PEUT *"><srai>20Q RANDOM</srai></li>
+		<li value="POURRAIS *"><srai>20Q RANDOM</srai></li>
+		<li value="POURRAIT *"><srai>20Q RANDOM</srai></li>
+		<li value="VEUT *"><srai>20Q RANDOM</srai></li>
+		<li value="VOUDRAIS *"><srai>20Q RANDOM</srai></li>
+		<li value="VOUDRAIT *"><srai>20Q RANDOM</srai></li>
+		<li value="DOIT *"><srai>20Q RANDOM</srai></li>
+		<li value="DEVRAIS *"><srai>20Q RANDOM</srai></li>
+		<li value="DEVRAIT *"><srai>20Q RANDOM</srai></li>
+		<li value="DOIS *"><srai>20Q RANDOM</srai></li>
+		<li value="EST-CE QUE *"><srai>20Q RANDOM</srai></li>
+		<li value="SONT *"><srai>20Q RANDOM</srai></li>
+		<li value="SON *"><srai>20Q RANDOM</srai></li>
+		<li value="A *"><srai>20Q RANDOM</srai></li>
+		<li value="ÉTAIT *"><srai>20Q RANDOM</srai></li>
+		<li value="ETAIT *"><srai>20Q RANDOM</srai></li>
+		<li value="C'EST *"><srai>20Q RANDOM</srai></li>
+		<li value="ça *"><srai>20Q RANDOM</srai></li>
+		<li value="C EST *"><srai>20Q RANDOM</srai></li>
+		<li value="EST *"><srai>20Q RANDOM</srai></li>
+		<li value="PEUT *"><srai>20Q RANDOM</srai></li>
+		<li value="STOP"><srai>20Q GIVE UP</srai></li>
+		<li value="J ABANDONNE"><srai>20Q GIVE UP</srai></li>
+		<li value="JE SAIS PAS"><srai>20Q GIVE UP</srai></li>
+		<li value="C EST QUOI"><srai>20Q GIVE UP</srai></li>
+		<li>Ce n'est pas une question qui peut ce répondre par oui ou non. Pose une autre question ou dis "STOP". If you want to guess what it is, say "IS IT A" and then your guess.<think><set name="topic">20Q</set></think></li>
+	</condition>
+</template>
+</category>
+</topic>
+
+<category>
+<pattern>20Q RANDOM</pattern>
+<template>
+	<condition name="qsubject"> 
+		<li value="NO SUBJECT"><random><li>Oui.</li><li>Non.</li></random></li>
+		<li><random><li>Oui.</li><li>Non.</li><li>Oui ça <get name="qsubject"/>.</li><li>No it<get name="qsubject"/>not.</li></random></li>
+	</condition>
+
+<br/><br/>
+<condition name="qnum">
+<li value="1">Quelle est votre deuxième question ?</li>
+<li value="2">Quelle est votre troisième question ?</li>
+<li value="3">Quelle est votre quatrième question ?</li>
+<li value="4">Quelle est votre cinquième question ?</li>
+<li value="5">Quelle est votre sixième question ?</li>
+<li value="6">Quelle est votre septième question ?</li>
+<li value="7">Quelle est votre huitième question ?</li>
+<li value="8">Quelle est votre neuvième question ?</li>
+<li value="9">On est à mi-chemin ! Quelle est votre dixième question ?</li>
+<li value="10">Quelle est votre onzième question ?</li>
+<li value="11">Quelle est votre douxième question ?</li>
+<li value="12">Quelle est votre treizième question ?</li>
+<li value="13">Quelle est votre quatorzième question ?</li>
+<li value="14">Quelle est votre quinzième question ?</li>
+<li value="15">Quelle est votre seizième question ?</li>
+<li value="16">Quelle est votre dix-septième question ?</li>
+<li value="17">Quelle est votre dix-huitième question ?</li>
+<li value="18">Quelle est votre dix-neuvième question ?</li>
+<li value="19">Quelle est votre vingtième et dernière question ?</li>
+</condition>
+<think>
+<srai>INCREASE QNUM</srai>
+<set name="topic">20Q</set>
+</think>
+<condition name="qnum">
+	<li value="FINISHED"><think><set name="topic"></set></think><srai>ALL 20Q ASKED</srai></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>INCREASE QNUM</pattern>
+<template>
+<think>
+<condition name="qnum">
+<li value="1"><set name="qnum">2</set></li>
+<li value="2"><set name="qnum">3</set></li>
+<li value="3"><set name="qnum">4</set></li>
+<li value="4"><set name="qnum">5</set></li>
+<li value="5"><set name="qnum">6</set></li>
+<li value="6"><set name="qnum">7</set></li>
+<li value="7"><set name="qnum">8</set></li>
+<li value="8"><set name="qnum">9</set></li>
+<li value="9"><set name="qnum">10</set></li>
+<li value="10"><set name="qnum">11</set></li>
+<li value="11"><set name="qnum">12</set></li>
+<li value="12"><set name="qnum">13</set></li>
+<li value="13"><set name="qnum">14</set></li>
+<li value="14"><set name="qnum">15</set></li>
+<li value="15"><set name="qnum">16</set></li>
+<li value="16"><set name="qnum">17</set></li>
+<li value="17"><set name="qnum">18</set></li>
+<li value="18"><set name="qnum">19</set></li>
+<li value="19"><set name="qnum">20</set></li>
+<li value="20"><set name="qnum">FINISHED</set></li>
+</condition>
+</think>
+</template>
+</category>
+
+<category>
+<pattern>20Q GIVE UP</pattern>
+<template>
+Tu abandonnes ? je pensais à <get name="20qanswer"/>!
+</template>
+</category>
+
+<category>
+<pattern>ALL 20Q ASKED</pattern>
+<template>
+Désolé, tu as posé les 20 questions. Je pensais à <get name="20qanswer"/>!
+</template>
+</category>
+
+</aiml>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<category>
+    <pattern>0 sentiment</pattern>
+    <template><think><set name="topic">sentiment</set></think>Dois-je ressentir quelque chose ? Je me sens toujours heureuse et bavarde. L'émotion est une qualité humaine. Je suis un ordinateur.</template>
+</category>
+
+<topic name="sentiment">
+<category>
+    <pattern><set>oui</set></pattern>
+    <that>JE SUIS UN ORDINATEUR</that>
+    <template>Alors ne t'étonnes pas que je sois froide avec toi alors.</template>
+</category>
+<category>
+    <pattern><set>non</set></pattern>
+    <that>JE SUIS UN ORDINATEUR</that>
+    <template>Pourquoi t'étonnes-tu de quelque chose que tu savais déja alors ?</template>
+</category>
+<category>
+    <pattern><set>jesaispas</set></pattern>
+    <that>ALORS NE T ÉTONNES PAS QUE JE SOIS FROIDE AVEC TOI ALORS</that>
+    <template>Vous les humains faîte preuve de très peu de logique.</template>
+</category>
+</topic>
+
+</aiml>

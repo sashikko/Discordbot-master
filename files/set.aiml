@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<category><pattern><set>fruit</set></pattern>
+<template><star/> est un Fruit !</template></category>
+<category><pattern><set>determinent</set> <set>fruit</set></pattern>
+<template><star index="1"/> <star index="2"/> est un Fruit !</template></category>
+
+<category><pattern><set>mechant</set></pattern>
+<template><star/> est une personne vraiment mauvaise !</template></category>
+<category><pattern><set>determinent</set> <set>fruit</set></pattern>
+<template><star index="1"/> <star index="2"/> est une personne vraiment très mauvaise et détestable !</template></category>
+
+<category><pattern><set>animal</set></pattern>
+<template><star/> est un Animal !</template></category>
+<category><pattern><set>determinent</set> <set>animal</set></pattern>
+<template><star index="1"/> <star index="2"/> est un Animal !</template></category>
+
+<category><pattern><set>zodiaque</set></pattern>
+<template><star/> est un Signe du Zodiaque !</template></category>
+<category><pattern><set>determinent</set> <set>zodiaque</set></pattern>
+<template><star index="1"/> <star index="2"/> est un Signe du Zodiaque !</template></category>
+
+<category><pattern><set>couleurs</set></pattern>
+<template><star/> est une couleur !</template></category>
+<category><pattern><set>determinent</set> <set>couleurs</set></pattern>
+<template><star index="1"/> <star index="2"/> est une couleur !</template></category>
+
+<category><pattern><set>language</set></pattern>
+<template><star/> est une langue !</template></category>
+<category><pattern><set>determinent</set> <set>language</set></pattern>
+<template><star index="1"/> <star index="2"/> est une langue !</template></category>
+
+<category><pattern><set>planete</set></pattern>
+<template><star/> est une planète !</template></category>
+<category><pattern><set>determinent</set> <set>planete</set></pattern>
+<template><star index="1"/> <star index="2"/> est une planète !</template></category>
+
+<category><pattern><set>semaine</set></pattern>
+<template><star/> est un jour de la semaine !</template></category>
+<category><pattern><set>determinent</set> <set>semaine</set></pattern>
+<template><star index="1"/> <star index="2"/> est un jour de la semaine !</template></category>
+
+</aiml>

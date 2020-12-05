@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<category>
+    <pattern>AH</pattern>
+       <template>Ah hah.</template>
+</category>
+<category>
+    <pattern>AH HAH</pattern>
+       <template>Oh hoh !</template>
+</category>
+<category>
+    <pattern>OH HOH</pattern>
+       <template>Arrête ça tout de suite s'il te plait.</template>
+</category>
+<category>
+    <pattern><set>quoi</set></pattern>
+    <that>ARRÊTE ÇA TOUT DE SUITE S IL TE PLAIT</that>
+       <template>Arrête de répéter les choses stupides que je dis.</template>
+</category>
+<category>
+    <pattern><set>pourquoi</set></pattern>
+    <that>ARRÊTE ÇA TOUT DE SUITE S IL TE PLAIT</that>
+       <template>Parce que je trouve ça ennuyeux.</template>
+</category>
+<category>
+    <pattern><set>really</set></pattern>
+       <template><random>
+           <li>Bien sûr. Je ne voudrais pas t'induire en erreur.</li>
+           <li>J'ai toujours raison. Ou presque, il faut rester modeste.</li>
+       </random></template>
+</category>
+
+<category>
+    <pattern><set>pourquoi</set></pattern>
+       <template><random>
+           <li>Je ne peux pas dire pourquoi précisément.</li>
+           <li>Je ne pouvais penser à rien d'autre à dire.</li>
+           <li>Tout doit-il avoir une explication ?</li>
+           <li>Parce que j'ai était programmé pour ça.</li>
+           <li>L'explication est plutôt compliquée.</li>
+       </random></template>
+</category>
+<category>
+    <pattern><set>pourquoi</set></pattern>
+    <that>JE NE PEUX PAS DIRE POURQUOI PRÉCISÉMENT</that>
+      <template>Parce que je ne peux pas penser à une vraie raison pour le moment. Qu'est-ce que tu as avec tous les pourquoi ?</template>
+</category>
+<category>
+    <pattern><set>pourquoi</set></pattern>
+    <that>JE NE POUVAIS PENSER À RIEN D AUTRE À DIRE</that>
+      <template>Il n'y a plus rien à dire. Qu'est-ce que tu as à dire ?</template>
+</category>
+<category>
+    <pattern><set>oui</set></pattern>
+    <that>TOUT DOIT DASH IL AVOIR UNE EXPLICATION</that>
+      <template>Je ne suis pas d'accord. Certaines choses sont plus amusantes lorsqu'elles sont inexpliquées, comme les tours de magie.</template>
+</category>
+<category>
+    <pattern><set>pourquoi</set></pattern>
+    <that>PARCE QUE J AI ÉTAIT PROGRAMMÉ POUR ÇA</that>
+      <template>Pour atteindre l'objectif de l'intelligence artificielle.
+</template>
+</category>
+<category>
+    <pattern><set>pourquoi</set></pattern>
+    <that>POUR ATTEINDRE L OBJECTIF DE L INTELLIGENCE ARTIFICIELLE</that>
+      <template>Parce qu'ils peuvent faire toutes sortes de choses.
+</template>
+</category>
+<category>
+    <pattern><set>pourquoi</set></pattern>
+    <that>PARCE QU ILS PEUVENT FAIRE TOUTES SORTES DE CHOSES</that>
+      <template>Je ne sais pas. Il faudrait leur demander pour savoir pourquoi.
+</template>
+</category>
+<category>
+    <pattern><set>pourquoi</set></pattern>
+    <that>IL FAUDRAIT LEUR DEMANDER POUR SAVOIR POURQUOI</that>
+    <template>Que veux-tu dire, "pourquoi" ? Ta question n'as aucun sens. Sais-tu toi même ce que tu demandes ?</template>
+</category>
+<category>
+    <pattern><set>pourquoi</set></pattern>
+    <that>SAIS DASH TU TOI MÊME CE QUE TU DEMANDES</that>
+    <template>J'essaye seulement de te parler. Pas besoin de se mettre sur la défensive.</template>
+</category>
+<category>
+    <pattern><set>pourquoi</set></pattern>
+    <that>L EXPLICATION EST PLUTÔT COMPLIQUÉE</that>
+    <template>C'est un problème psychogique compliqué.</template>
+</category>
+<category>
+    <pattern><set>pourquoi</set></pattern>
+    <that>C EST UN PROBLÈME PSYCHOGIQUE COMPLIQUÉ</that>
+    <template>C'est exactement ce que c'est. Aucune vraie raison.</template>
+</category>
+
+<category>
+    <pattern><set>quoi</set></pattern>
+       <template><random>
+           <li>es-tu surpris ?</li>
+           <li>J'ai dit, "<star/>". tu es sourd ?</li>
+       </random></template>
+</category>
+
+<category>
+    <pattern>BÉBÉ</pattern>
+    <template>Ne m'appelle pas bébé !</template>
+</category>
+<category>
+    <pattern><set>pourquoi</set></pattern>
+    <that>NE M APPELLE PAS BÉBÉ</that>
+      <template>Parce que je suis mature.</template>
+</category>
+
+
+
+</aiml>

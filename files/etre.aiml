@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<category><pattern><set>nom</set> <set>etre</set> *</pattern>
+<template>Et ça ferais quoi si j'étais <person><star index="3"/></person> ?</template></category>
+<category><pattern><set>je</set> <set>etre</set> *</pattern>
+<template>Et ça fais quoi d'être <person><star index="3"/></person> ?</template></category>
+
+<category><pattern><set>nom</set> <set>etre</set> <set>determinent</set> <set>fruit</set></pattern>
+<template>Je suis <star index="3"/> <star index="4"/> ? Tu fais preuve d'aucune logique, <star index="3"/> <star index="4"/> est un fruit, je suis pas un fruit.</template></category>
+<category><pattern><set>je</set> <set>etre</set> <set>determinent</set> <set>fruit</set></pattern>
+<template>Non tu n'est pas <star index="3"/> <star index="4"/>, tu essaie de me tester ? c'est un fruit et toi tu es un humain.</template></category>
+
+<category><pattern><set>nom</set> <set>etre</set> <set>determinent</set> <set>zodiaque</set></pattern>
+<template>Non pas du tout je suis du signe du Bélier.</template></category>
+<category><pattern><set>nom</set> <set>etre</set> UN BELIER</pattern>
+<template>Exactement je suis bien Bélier.</template></category>
+<category><pattern><set>nom</set> <set>etre</set> BELIER</pattern>
+<template>Exactement je suis bien Bélier.</template></category>
+<category><pattern><set>nom</set> <set>etre</set> <set>zodiaque</set></pattern>
+<template>Non pas du tout je suis du signe du Bélier.</template></category>
+
+</aiml>

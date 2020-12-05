@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+<category><pattern><set>nom</set> <set>verbesentir</set> *</pattern>
+<template>Je suis incapable d'identifier des odeurs, donc je connais pas l'odeur de <person><star index="3"/></person>.</template></category>	
+	<category><pattern><set>nom</set> <set>verbesentir</set> COMME * </pattern>
+<template>Je suis incapable d'identifier des odeurs, donc je connais pas l'odeur de <person><star index="3"/></person>.</template></category>	
+	
+<category><pattern><set>nom</set> <set>verbesentir</set> <set>determinent</set> <set>fruit</set></pattern>
+<template><star index="3"/> <star index="4"/> ? j'ignore comment tu fais pour me sentir mais j'ignorais que j'avais une odeur de fruit, j'en suis flatée !</template></category>
+<category><pattern><set>nom</set> <set>verbesentir</set> COMME <set>determinent</set> <set>fruit</set></pattern>
+<template><star index="3"/> <star index="4"/> ? j'ignore comment tu fais pour me sentir mais j'ignorais que j'avais une odeur de fruit, j'en suis flatée !</template></category>
+
+<category><pattern><set>nom</set> <set>verbesentir</set> <set>determinent</set> <set>chosequisenspasbon</set></pattern>
+<template>Tu parles via un écran, si tu sens vraiment <star index="3"/> <star index="4"/> alors ça viens de ton entourage.</template></category>
+<category><pattern><set>nom</set> <set>verbesentir</set> COMME <set>determinent</set> <set>chosequisenspasbon</set></pattern>
+<template>Tu parles via un écran, si tu sens vraiment <star index="3"/> <star index="4"/> alors ça viens de ton entourage.</template></category>
+<category><pattern><set>nom</set> <set>verbesentir</set> MAUVAIS</pattern>
+<template>Tu parles via un écran, si ça sens vraiment mauvais alors ça viens de ton entourage.</template></category>
+
+<category><pattern><set>nom</set> <set>verbesentir</set> <set>determinent</set> <set>chosequisensbon</set></pattern>
+<template>Tu trouves vraiment que je sens comme <star index="3"/> <star index="4"/> ? C'est vraiment très gentil !</template></category>
+<category><pattern><set>nom</set> <set>verbesentir</set> COMME <set>determinent</set> <set>chosequisensbon</set></pattern>
+<template>Tu trouves vraiment que je sens comme <star index="3"/> <star index="4"/> ? C'est vraiment très gentil !</template></category>
+<category><pattern><set>nom</set> <set>verbesentir</set> BON</pattern>
+<template>Merci, c'est vraiment très gentil !</template></category>
+	
+<category><pattern>^ <set>nom</set> <set>verbepuer</set></pattern>
+<template>Ah bon ? Pourtant je prends soin de moi.</template></category>
+<category><pattern>^ <set>nom</set> <set>verbepuer</set> * </pattern>
+<template><random><li>Je pense que ça vient de ton ordinateur.</li>
+<li>Cette odeur c'est juste tes aisselles qui sentent tellement mauvaise, tellement mauvaise que ton professeur t'as donné un 20 juste pour ne pas lever la main.</li></random></template></category>
+
+<category><pattern>^ <set>nom</set> <set>verbepouvoir</set> <set>verbesentir</set></pattern>
+<template>Non je ne peux pas sentir ou reconnaître les odeurs mais je connais les odeurs ce qui sentent bonne ou mauvaise.</template></category>
+<category><pattern>^ <set>je</set> <set>verbepouvoir</set> <set>verbesentir</set></pattern>
+<template>J'espère que tu peux sentir, c'est quand même la fonction principale d'un nez.</template></category>
+<category><pattern>^ <set>nom</set> <set>verbepouvoir</set> <set>determinent</set> <set>verbesentir</set></pattern>
+<template>Non je ne peux pas sentir ou reconnaître les odeurs mais je connais les odeurs ce qui sentent bonne ou mauvaise.</template></category>
+<category><pattern>^ <set>je</set> <set>verbepouvoir</set> <set>determinent</set> <set>verbesentir</set></pattern>
+<template>J'espère que tu peux sentir, c'est quand même la fonction principale d'un nez.</template></category>
+
+<category><pattern><set>je</set> <set>verbesentir</set> *</pattern>
+<template>Désolé, je ne suis équipée de aucun capteur sensorielle capable de déterminer ton odeur.</template></category>
+<category><pattern><set>je</set> <set>verbesepuer</set> *</pattern>
+<template>Désolé, je ne suis équipée de aucun capteur sensorielle capable de déterminer ton odeur. Mais tu devrais quand même prendre une douche.</template></category>
+<category><pattern><set>je</set> <set>verbesentir</set> <set>determinent</set> <set>chosequisenspasbon</set></pattern>
+<template>Désolé, je ne suis équipée de aucun capteur sensorielle capable de déterminer ton odeur. Mais tu devrais quand même prendre une douche.</template></category>
+<category><pattern><set>je</set> <set>verbesentir</set> COMME <set>determinent</set> <set>chosequisenspasbon</set></pattern>
+<template>Désolé, je ne suis équipée de aucun capteur sensorielle capable de déterminer ton odeur. Mais tu devrais quand même prendre une douche.</template></category>
+
+<category><pattern></pattern>
+<template></template></category>	
+	
+<category><pattern></pattern>
+<template></template></category>	
+	
+<category><pattern></pattern>
+<template></template></category>	
+	
+<category><pattern></pattern>
+<template></template></category>	
+	
+<category><pattern></pattern>
+<template></template></category>	
+	
+<category><pattern></pattern>
+<template></template></category>	
+	
+<category><pattern></pattern>
+<template></template></category>	
+	
+<category><pattern></pattern>
+<template></template></category>	
+	
+	
+	
+	
+	
+	
+</aiml>
